@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+h1 {
+  margin-top: 50px;
+  padding-bottom: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #00B0FF;
+}
+
+h2 {
+  font-size: 22px;
+  text-align: center;
+  color: #5C5A6C;
+  padding-bottom: 20px;
+}
+
+.PageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* input for adding task*/
+.input-container {
+  display: flex;
+  justify-content: space-between ;
+  width: 328px;
+  height: 49px;
+  background: rgba(170, 169, 183, 0.2);
+  border-radius: 25px;
+}
+
+.addTask {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  line-height: 47px;
+  color: #111111;
+  margin-left: 15px;
+  opacity: 0.4;
+}
+
+.icon-container {
+  margin-top: 15px;
+  margin-right: 15px;
+}
+
+.plus-button {
+  border: none;
+  outline: none;
+}
+
+.plus-button:hover {
+  cursor: pointer;
+}
+
+.todo-area,
+.done-area {
+  padding-top: 50px;
+}
+
+/* Todo and Done section when there is no task */
+
+.empty {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 232px;
+  height: 103px;
+  background: #FDFDFD;
+  border: 1px solid #DFDFDF;
+  border-radius: 6px;
+}
+
+.empty img {
+  width: 50px;
+  height: 50px;
+}
+
+.empty span {
+  font-size: 16px;
+  line-height: 19px;
+  color: #39374E;
+  opacity: 0.7;
+}
