@@ -93,3 +93,39 @@ h2 {
   color: #39374E;
   opacity: 0.7;
 }
+
+.full{
+  display: flex;
+  flex-direction: row;
+  padding: 5px 15px;
+
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  background: #FDFDFD;
+  border: 1px solid #DFDFDF;
+  border-radius: 6px;
+}
+
+.full .task-buttons .check:hover{
+  background-color: rgba(12, 131, 12, 0.13);
+  border-radius: 25px;
+}
+
+.full .task-buttons .delete:hover{
+  background-color: rgba(131, 12, 12, 0.144);
+  border-radius: 25px;
+}
+
+
+
+.done{
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.done .check{
+  display: none;
+}
+
+
