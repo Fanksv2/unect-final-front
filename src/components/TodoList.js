@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Task from "./Task";
 
-function TodoList() {
+class TodoList extends Component {
+
 
   // {
   //   "_id": "60062e215ea4951e28edef7c",
@@ -14,20 +15,17 @@ function TodoList() {
   //   "__v": 0
   // }
 
-  var data = {
-    id: "60062e215ea4951e28edef7c",
-    content: {
-      text: "dsahusadhdsa",
-      "status": "todo"
-    }
-  }
 
-  return (
-    <section className="todo-area">
-      <h2>TO DO</h2>
-      <Task data={data}/>
-    </section>
-  );
+  
+  render(){
+    return (
+      <section className="todo-area">
+        <h2>TO DO</h2>
+        <Task data={undefined}/>
+      </section>
+    )
+  }
+  
 }
 
 export default TodoList;
