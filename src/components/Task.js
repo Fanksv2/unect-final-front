@@ -1,4 +1,5 @@
 import React from 'react';
+
 let image = require("../assets/img/fxemoji_beachumbrella.png");
 let checkImage = require("../assets/img/ic_round-done.png");
 let minusImage = require("../assets/img/mdi_minus.png");
@@ -21,7 +22,7 @@ function full(data){
                 {data.content.text}
             </p>
             <div className="task-buttons">
-                <img src={checkImage.default} alt="" className="check"/>
+                <img  src={checkImage.default} alt="" className="check"/>
                 <img src={minusImage.default} alt ="" className="delete"/>
             </div>
             
