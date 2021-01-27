@@ -29,7 +29,7 @@ function full(data){
                 <img  
                     src={checkImage.default} 
                     alt="" className="check"
-                    onClick={changeToDone(data)}
+                    onClick={() => changeToDone(data)}
                 />
                 <img src={minusImage.default} alt ="" className="delete"/>
             </div>
