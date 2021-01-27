@@ -31,7 +31,12 @@ function full(data){
                     alt="" className="check"
                     onClick={() => changeToDone(data)}
                 />
-                <img src={minusImage.default} alt ="" className="delete"/>
+                <img 
+                    src={minusImage.default} 
+                    alt ="" 
+                    className="delete"
+                    onClick={() => deleteTask(data)}
+                />
             </div>
             
         </div>
@@ -49,6 +54,15 @@ function empty(){
 
 async function changeToDone(data){
     await api.post("check", {data: {id: data._id}});
+}
+
+async function deleteTask(data){
+    await api.delete("delete", 
+    {
+        data : {
+            id : data._id
+        }
+    });
 }
 
 export default TaskList;
