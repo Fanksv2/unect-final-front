@@ -47,7 +47,11 @@ h2 {
   line-height: 47px;
   color: #111111;
   margin-left: 15px;
-  opacity: 0.4;
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  opacity: 0.4; 
 }
 
 .icon-container {
@@ -113,14 +117,14 @@ h2 {
 .full .task-buttons .check:hover{
   background-color: rgba(12, 131, 12, 0.13);
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .full .task-buttons .delete:hover{
   background-color: rgba(131, 12, 12, 0.144);
   border-radius: 25px;
+  cursor: pointer;
 }
-
-
 
 .done{
   opacity: 0.5;
