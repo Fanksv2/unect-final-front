@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { IconContext } from "react-icons";
 import { AiOutlinePlus } from "react-icons/ai";
-import {useState} from 'react';
 import api from "../services/api";
 
 function TodoInput() {
