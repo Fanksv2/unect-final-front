@@ -12,13 +12,13 @@ class TodoList extends Component {
   registerSocket(){
     const socket = io("http://localhost:3030", { transport : ['websocket'] });
   
-    socket.on("create", () => {
+    socket.on("createTask", () => {
       this.refreshData();
     });
-    socket.on("delete", () => {
+    socket.on("deleteTodo", () => {
       this.refreshData();
     });
-    socket.on("check", () => {
+    socket.on("checkTask", () => {
       this.refreshData();
     });
   }
@@ -32,17 +32,26 @@ class TodoList extends Component {
     this.refreshData();
   }
   
+  renderTasks(){
+    if(this.state.tasks.length === 0){
+      return <Task data={undefined}/>
+    }else{
+      return(
+        this.state.tasks.map(task =>(
+          <Task data={task} key={task._id}/>
+          )
+        )
+      )
+    }
+  }
+
   render(){
     this.registerSocket();
     return (
       <section className="todo-area">
         <h2>TO DO</h2>
         {
-          this.state.tasks.map(task =>(
-              <Task data={task} key={task._id}/>
-            )
-          )
-          
+            this.renderTasks()
         }
       </section>
     )

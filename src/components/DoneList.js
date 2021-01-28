@@ -12,10 +12,10 @@ class DoneList extends Component {
   registerSocket(){
     const socket = io("http://localhost:3030", { transport : ['websocket'] });
   
-    socket.on("delete", () => {
+    socket.on("deleteDone", () => {
       this.refreshData();
     });
-    socket.on("check", () => {
+    socket.on("checkTask", () => {
       this.refreshData();
     });
   }
@@ -29,16 +29,26 @@ class DoneList extends Component {
     this.refreshData();
   }
 
+  renderTasks(){
+    if(this.state.tasks.length === 0){
+      return <Task data={undefined}/>
+    }else{
+      return(
+        this.state.tasks.map(task =>(
+          <Task data={task} key={task._id}/>
+          )
+        )
+      )
+    }
+  }
+
   render() {
     this.registerSocket();
     return (
       <section className="done-area">
         <h2>DONE</h2>
         {
-          this.state.tasks.map(task =>(
-              <Task data={task} key={task._id}/>
-            )
-          )
+          this.renderTasks()
         }
       </section>
     );

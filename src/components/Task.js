@@ -7,8 +7,6 @@ let minusImage = require("../assets/img/mdi_minus.png");
 
 function TaskList(data) {
     data = data.data;
-    
-    console.log(data);
     if(data === undefined){
         return (empty());
     }else{
