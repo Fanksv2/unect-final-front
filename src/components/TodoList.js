@@ -16,6 +16,7 @@ class TodoList extends Component {
       this.refreshData();
     });
     socket.on("deleteTodo", () => {
+      console.log("DELETETODO");
       this.refreshData();
     });
     socket.on("checkTask", () => {
@@ -29,6 +30,8 @@ class TodoList extends Component {
   }
 
   async componentDidMount(){
+    console.log("RODOUTODO");
+    this.registerSocket();
     this.refreshData();
   }
   
@@ -46,7 +49,6 @@ class TodoList extends Component {
   }
 
   render(){
-    this.registerSocket();
     return (
       <section className="todo-area">
         <h2>TO DO</h2>

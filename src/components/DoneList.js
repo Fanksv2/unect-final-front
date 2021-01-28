@@ -26,6 +26,8 @@ class DoneList extends Component {
   }
 
   async componentDidMount(){
+    console.log("RODOUDONE")
+    this.registerSocket();
     this.refreshData();
   }
 
@@ -43,7 +45,6 @@ class DoneList extends Component {
   }
 
   render() {
-    this.registerSocket();
     return (
       <section className="done-area">
         <h2>DONE</h2>
