@@ -124,6 +124,12 @@ input::-webkit-input-placeholder {
   cursor: pointer;
 }
 
+.full .task-buttons .edit:hover {
+  background-color: rgba(8, 104, 230, 0.13);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
 .full .task-buttons .delete:hover{
   background-color: rgba(131, 12, 12, 0.144);
   border-radius: 25px;
