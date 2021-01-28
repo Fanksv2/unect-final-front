@@ -10,9 +10,9 @@ function App() {
     <>
       <div className='PageContainer'>
         <h1>uTask</h1>
-        <TodoInput />
-        <TodoList />
-        <DoneList />
+          <TodoInput />
+          <TodoList />
+          <DoneList />
       </div>
     </>
   );
