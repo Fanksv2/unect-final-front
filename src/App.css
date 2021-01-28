@@ -33,12 +33,18 @@ h2 {
 /* input for adding task*/
 .input-container {
   display: flex;
-  justify-content: space-between ;
+  justify-content: stretch;
   width: 328px;
   height: 49px;
   background: rgba(170, 169, 183, 0.2);
   border-radius: 25px;
 }
+
+
+.input-container input {
+  width: 100%;
+}
+
 
 .addTask {
   border: none;
