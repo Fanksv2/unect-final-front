@@ -73,6 +73,10 @@ input::-webkit-input-placeholder {
   padding-top: 50px;
 }
 
+.done-area{
+  margin-bottom: 50px;
+}
+
 /* Todo and Done section when there is no task */
 
 .empty {
