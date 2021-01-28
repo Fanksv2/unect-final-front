@@ -3,7 +3,6 @@ import api from "../services/api";
 
 let image = require("../assets/img/fxemoji_beachumbrella.png");
 let checkImage = require("../assets/img/ic_round-done.png");
-let editImage = require("../assets/img/edit_img.png");
 let minusImage = require("../assets/img/mdi_minus.png");
 
 function TaskList(data) {
@@ -29,10 +28,6 @@ function full(data){
                     src={checkImage.default} 
                     alt="" className="check"
                     onClick={() => changeToDone(data)}
-                />
-                <img  
-                    src={editImage.default} 
-                    alt="" className="edit"
                 />
                 <img 
                     src={minusImage.default} 
